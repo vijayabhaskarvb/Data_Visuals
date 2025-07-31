@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+sns.set()
+
 # Set page title and layout
 st.set_page_config(page_title="Adidas Data Visualizations")
 st.title("Adidas Dataset Visualizations")
