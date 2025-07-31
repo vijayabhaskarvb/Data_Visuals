@@ -56,8 +56,8 @@ if st.checkbox("Show Pairplot (may be slow)"):
 
 #Pie Chart
 st.subheader("Pie Chart")
-selected_cat_col = st.multiselect("Select a categorical column for Pie Chart", categorical_cols,default=categorical_cols[4])
-selected_num_col = st.multiselect("Select a numeric column to aggregate", numeric_cols, key='pie_numeric', default=numeric_cols[3])
+selected_cat_col = st.multiselect("Select a categorical column for Pie Chart", categorical_cols, index=4)
+selected_num_col = st.multiselect("Select a numeric column to aggregate", numeric_cols, key='pie_numeric', index=3)
 
 if selected_cat_col and selected_num_col:
     pie_data = dataset.groupby(selected_cat_col)[selected_num_col].sum()
