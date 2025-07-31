@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Set page title and layout
-st.set_page_config(page_title="Adidas Data Visualizations", layout="wide")
+st.set_page_config(page_title="Adidas Data Visualizations")
 st.title("Adidas Dataset Visualizations")
 
 # Load dataset
