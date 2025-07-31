@@ -35,8 +35,8 @@ if selected_bar_col:
 
 # Scatter Plot
 st.subheader("Scatter Plot")
-scatter_x = st.selectbox("X-axis", numeric_cols, index=0, key='scatter_x')
-scatter_y = st.selectbox("Y-axis", numeric_cols, index=1, key='scatter_y')
+scatter_x = st.selectbox("X-axis", numeric_cols, index=2, key='scatter_x')
+scatter_y = st.selectbox("Y-axis", numeric_cols, index=4, key='scatter_y')
 fig1, ax1 = plt.subplots()
 sns.scatterplot(data=dataset, x=scatter_x, y=scatter_y, ax=ax1, color='blue')
 st.pyplot(fig1)
@@ -56,8 +56,8 @@ if st.checkbox("Show Pairplot (may be slow)"):
 
 # Pie Chart
 st.subheader("Pie Chart")
-selected_cat_col = st.selectbox("Select a categorical column for Pie Chart", categorical_cols)
-selected_num_col = st.selectbox("Select a numeric column to aggregate", numeric_cols, key='pie_numeric')
+selected_cat_col = st.selectbox("Select a categorical column for Pie Chart", categorical_cols, default=categorical_cols[2])
+selected_num_col = st.selectbox("Select a numeric column to aggregate", numeric_cols, key='pie_numeric', default=numeric_cols[4])
 
 if selected_cat_col and selected_num_col:
     pie_data = dataset.groupby(selected_cat_col)[selected_num_col].sum()
