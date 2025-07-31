@@ -20,7 +20,7 @@ categorical_cols = dataset.select_dtypes(include='object').columns.tolist()
 
 # Line Chart
 st.subheader("Line Chart")
-selected_line_cols = st.multiselect("Select numeric columns for Line Chart", numeric_cols, default=numeric_cols[:2])
+selected_line_cols = st.multiselect("Select numeric columns for Line Chart", numeric_cols, default=numeric_cols[8])
 if selected_line_cols:
     st.line_chart(dataset[selected_line_cols])
 else:
